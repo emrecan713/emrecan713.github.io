@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
       navLinks.classList.toggle('open');
       navToggle.classList.toggle('active');
     });
-    // Close on link click
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('open');
@@ -31,16 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ---------- Scroll reveal (progressive enhancement) ----------
-  // Content is visible by default. We only add the hidden state if
-  // we can confirm the browser isn't throttling our timers.
   const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
 
-  // Test if timers are being throttled (automated/background tabs)
   let timerOk = false;
   const t0 = performance.now();
   requestAnimationFrame(() => {
     const elapsed = performance.now() - t0;
-    // If rAF fires within 200ms, timers are healthy — enable reveals
     if (elapsed < 200) {
       timerOk = true;
       revealElements.forEach(el => {
@@ -73,6 +68,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealElements.forEach(el => revealObserver.observe(el));
 
+  // ---------- Stagger children index assignment ----------
+  document.querySelectorAll('.stagger-children').forEach(container => {
+    Array.from(container.children).forEach((child, i) => {
+      child.style.setProperty('--stagger-index', i);
+    });
+  });
+
   // ---------- Active nav link highlighting ----------
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a').forEach(link => {
@@ -93,8 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Hero entrance animations now handled by CSS keyframes (heroFadeUp / heroFadeIn)
-
   // ---------- Typing effect for greeting ----------
   const greeting = document.querySelector('.hero-greeting');
   if (greeting) {
@@ -109,12 +109,50 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 60);
   }
 
+  // ---------- SVG flow path lengths (for draw-in animation) ----------
+  document.querySelectorAll('.hero-swirl .flow').forEach(path => {
+    const len = path.getTotalLength();
+    path.style.strokeDasharray = len;
+    path.style.strokeDashoffset = len;
+  });
+
+  // ---------- Organic breathing: animate feTurbulence seed ----------
+  const turbulence = document.querySelector('#organic-breathe feTurbulence');
+  if (turbulence) {
+    let seed = 5;
+    setInterval(() => {
+      seed = (seed % 100) + 1;
+      turbulence.setAttribute('seed', seed);
+    }, 3000);
+  }
+
   // ---------- Parallax on hero swirl ----------
   const swirl = document.querySelector('.hero-swirl');
   if (swirl) {
     window.addEventListener('scroll', () => {
       const scrolled = window.scrollY;
-      swirl.style.transform = `translateY(${scrolled * 0.15}px) rotate(${scrolled * 0.02}deg)`;
+      swirl.style.transform = `translateY(${scrolled * 0.12}px)`;
+    });
+  }
+
+  // ---------- Scroll progress bar ----------
+  const scrollProgress = document.getElementById('scrollProgress');
+  if (scrollProgress) {
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = docHeight > 0 ? window.scrollY / docHeight : 0;
+      scrollProgress.style.transform = `scaleX(${scrolled})`;
+    });
+  }
+
+  // ---------- Back to top button ----------
+  const backToTop = document.getElementById('backToTop');
+  if (backToTop) {
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 300);
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 

@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr. Emrecan Gulay | HCI Researcher &amp; Creative Technologist</title>
-  <meta name="description" content="Dr. Emrecan Gulay - Researcher and creative technologist specializing in human-computer interaction (HCI) and user experience (UX).">
+  <title>Dr. Emrecan Gulay | Human-AI Interaction Researcher</title>
+  <meta name="description" content="Dr. Emrecan Gulay - Postdoctoral researcher investigating the relational dynamics between humans and AI systems at Aalto University.">
   <link rel="icon" href="images/logo.png" type="image/png">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Dr. Emrecan Gulay | HCI Researcher &amp; Creative Technologist">
-  <meta property="og:description" content="Researcher and creative technologist specializing in human-computer interaction (HCI) and user experience (UX).">
+  <meta property="og:title" content="Dr. Emrecan Gulay | Human-AI Interaction Researcher">
+  <meta property="og:description" content="Postdoctoral researcher investigating the relational dynamics between humans and AI systems at Aalto University.">
   <meta property="og:image" content="https://emrecangulay.github.io/images/profile-photo.jpg">
   <meta property="og:url" content="https://emrecangulay.github.io/">
   <meta property="og:type" content="website">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Dr. Emrecan Gulay | HCI Researcher &amp; Creative Technologist">
-  <meta name="twitter:description" content="Researcher and creative technologist specializing in human-computer interaction (HCI) and user experience (UX).">
+  <meta name="twitter:title" content="Dr. Emrecan Gulay | Human-AI Interaction Researcher">
+  <meta name="twitter:description" content="Postdoctoral researcher investigating the relational dynamics between humans and AI systems at Aalto University.">
   <meta name="twitter:image" content="https://emrecangulay.github.io/images/profile-photo.jpg">
 
   <!-- JSON-LD Structured Data -->
@@ -28,16 +28,16 @@
     "name": "Dr. Emrecan Gulay",
     "url": "https://emrecangulay.github.io/",
     "image": "https://emrecangulay.github.io/images/profile-photo.jpg",
-    "jobTitle": "HCI Researcher & Creative Technologist",
+    "jobTitle": "Postdoctoral Researcher",
     "worksFor": {
       "@type": "Organization",
-      "name": "Aalto University"
+      "name": "Aalto University School of Business"
     },
     "sameAs": [
       "https://www.linkedin.com/in/emrecan-gulay/",
       "https://scholar.google.com/citations?user=F1DVHl8AAAAJ&hl=en"
     ],
-    "knowsAbout": ["Human-Computer Interaction", "User Experience", "Design Research", "Creative Technology"]
+    "knowsAbout": ["Human-AI Interaction", "Relational Dynamics", "Human-Computer Interaction", "Design Research", "Responsible AI"]
   }
   </script>
 
@@ -49,6 +49,9 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-page="home">
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
 
   <!-- ========== NAVIGATION ========== -->
   <nav class="navbar">
@@ -66,6 +69,7 @@
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="highlights.html">Highlights</a></li>
         <li><a href="publications.html">Publications</a></li>
+        <li><a href="cv.html">CV</a></li>
       </ul>
     </div>
   </nav>
@@ -76,9 +80,9 @@
       <div class="hero-content">
         <span class="hero-greeting">Hello!</span>
         <h1 class="hero-title">
-          I am <strong>Emrecan,</strong> a researcher and creative technologist specializing in
-          <span class="gradient-text-orange">human-computer interaction (HCI)</span> and
-          <span class="gradient-text-teal">user experience (UX)</span>.
+          I am <strong>Emrecan,</strong> a postdoctoral researcher investigating the
+          <span class="gradient-text-orange">relational dynamics</span> between humans and
+          <span class="gradient-text-teal">AI systems</span>.
         </h1>
         <div class="hero-cta">
           <a href="highlights.html" class="btn btn-primary">View My Work</a>
@@ -86,28 +90,99 @@
         </div>
       </div>
       <div class="hero-visual">
-        <img src="images/swirl-decoration.png" alt="Decorative swirl design" class="hero-swirl">
+        <!-- Inline SVG: 30° Angled Flow — parallel swaying curves with upward particle pixelation -->
+        <svg class="hero-swirl" viewBox="0 -100 600 1000" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <!-- Angled fade gradients -->
+            <linearGradient id="fade-a-coral" x1="0" y1="1" x2="0.5" y2="0" gradientUnits="objectBoundingBox">
+              <stop offset="0%" stop-color="#E07A5F" stop-opacity="0"/>
+              <stop offset="12%" stop-color="#E07A5F" stop-opacity="1"/>
+              <stop offset="82%" stop-color="#E07A5F" stop-opacity="1"/>
+              <stop offset="100%" stop-color="#E07A5F" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="fade-a-gold" x1="0" y1="1" x2="0.5" y2="0" gradientUnits="objectBoundingBox">
+              <stop offset="0%" stop-color="#F2CC8F" stop-opacity="0"/>
+              <stop offset="12%" stop-color="#F2CC8F" stop-opacity="1"/>
+              <stop offset="82%" stop-color="#F2CC8F" stop-opacity="1"/>
+              <stop offset="100%" stop-color="#F2CC8F" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="fade-a-teal" x1="0" y1="1" x2="0.5" y2="0" gradientUnits="objectBoundingBox">
+              <stop offset="0%" stop-color="#81B29A" stop-opacity="0"/>
+              <stop offset="12%" stop-color="#81B29A" stop-opacity="1"/>
+              <stop offset="82%" stop-color="#81B29A" stop-opacity="1"/>
+              <stop offset="100%" stop-color="#81B29A" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="fade-a-soft" x1="0" y1="1" x2="0.5" y2="0" gradientUnits="objectBoundingBox">
+              <stop offset="0%" stop-color="#C8B6FF" stop-opacity="0"/>
+              <stop offset="12%" stop-color="#C8B6FF" stop-opacity="1"/>
+              <stop offset="82%" stop-color="#C8B6FF" stop-opacity="1"/>
+              <stop offset="100%" stop-color="#C8B6FF" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="fade-a-purple" x1="0" y1="1" x2="0.5" y2="0" gradientUnits="objectBoundingBox">
+              <stop offset="0%" stop-color="#9B7FE6" stop-opacity="0"/>
+              <stop offset="15%" stop-color="#9B7FE6" stop-opacity="1"/>
+              <stop offset="80%" stop-color="#9B7FE6" stop-opacity="1"/>
+              <stop offset="100%" stop-color="#9B7FE6" stop-opacity="0"/>
+            </linearGradient>
+            <!-- Far-layer gradients (aerial perspective — desaturated, low opacity) -->
+            <linearGradient id="fade-far-warm" x1="0" y1="1" x2="0.4" y2="0" gradientUnits="objectBoundingBox">
+              <stop offset="0%" stop-color="#E8A998" stop-opacity="0"/>
+              <stop offset="15%" stop-color="#E8A998" stop-opacity="0.14"/>
+              <stop offset="80%" stop-color="#E8A998" stop-opacity="0.14"/>
+              <stop offset="100%" stop-color="#E8A998" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="fade-far-cool" x1="0" y1="1" x2="0.4" y2="0" gradientUnits="objectBoundingBox">
+              <stop offset="0%" stop-color="#A8CCBA" stop-opacity="0"/>
+              <stop offset="15%" stop-color="#A8CCBA" stop-opacity="0.14"/>
+              <stop offset="80%" stop-color="#A8CCBA" stop-opacity="0.14"/>
+              <stop offset="100%" stop-color="#A8CCBA" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="fade-far-muted" x1="0" y1="1" x2="0.4" y2="0" gradientUnits="objectBoundingBox">
+              <stop offset="0%" stop-color="#D4C8F0" stop-opacity="0"/>
+              <stop offset="15%" stop-color="#D4C8F0" stop-opacity="0.12"/>
+              <stop offset="80%" stop-color="#D4C8F0" stop-opacity="0.12"/>
+              <stop offset="100%" stop-color="#D4C8F0" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+
+          <!-- ═══ FAR DEPTH LAYER — ghost S-curves for aerial perspective ═══ -->
+          <g class="stream stream-far">
+            <path class="flow flow-far ff1" style="--sway-x:8px;--sway-dur:11s" d="M20,920 C-30,780 80,700 30,580 C-20,460 90,380 50,250 C10,120 70,30 60,-100" stroke="url(#fade-far-warm)" stroke-width="1" />
+            <path class="flow flow-far ff2" style="--sway-x:6px;--sway-dur:13s" d="M130,950 C180,820 90,720 140,600 C190,480 100,400 150,270 C200,140 120,50 160,-80" stroke="url(#fade-far-cool)" stroke-width="0.8" />
+            <path class="flow flow-far ff3" style="--sway-x:10px;--sway-dur:9s" d="M250,930 C200,790 310,680 260,550 C210,420 320,330 280,200 C240,70 300,-20 290,-100" stroke="url(#fade-far-muted)" stroke-width="1" />
+            <path class="flow flow-far ff4" style="--sway-x:7px;--sway-dur:12s" d="M370,940 C420,800 330,700 380,570 C430,440 340,360 390,230 C440,100 360,10 400,-100" stroke="url(#fade-far-warm)" stroke-width="0.8" />
+            <path class="flow flow-far ff5" style="--sway-x:9px;--sway-dur:10s" d="M470,920 C420,780 530,670 480,540 C430,410 540,310 500,180 C460,50 520,-40 510,-100" stroke="url(#fade-far-cool)" stroke-width="1" />
+            <path class="flow flow-far ff6" style="--sway-x:5px;--sway-dur:14s" d="M560,950 C610,810 520,710 570,580 C620,450 530,370 580,240 C630,110 550,20 590,-100" stroke="url(#fade-far-muted)" stroke-width="0.8" />
+          </g>
+
+          <!-- ═══ MAIN — Human curves (coral/gold, left third) — dramatic S-curves ═══ -->
+          <g class="stream stream-human">
+            <path class="flow flow-h1" style="--sway-x:14px;--sway-dur:7s" d="M60,920 C-10,780 130,680 40,540 C-50,400 140,310 70,170 C0,40 110,-50 80,-100" stroke="url(#fade-a-coral)" stroke-width="3.5" />
+            <path class="flow flow-h2" style="--sway-x:11px;--sway-dur:9s" d="M160,950 C220,810 100,710 170,580 C240,450 110,370 180,240 C250,110 130,20 190,-80" stroke="url(#fade-a-coral)" stroke-width="2.5" stroke-opacity="0.55" />
+            <path class="flow flow-h3" style="--sway-x:16px;--sway-dur:8s" d="M100,720 C50,610 160,530 90,420 C20,310 150,240 100,130 C50,20 130,-50 110,-100" stroke="url(#fade-a-gold)" stroke-width="2" stroke-opacity="0.35" />
+            <path class="flow flow-h4" style="--sway-x:9px;--sway-dur:11s" d="M210,900 C270,770 150,680 220,550 C290,420 165,340 240,210 C315,80 180,-10 260,-100" stroke="url(#fade-a-coral)" stroke-width="1.5" stroke-opacity="0.22" />
+          </g>
+
+          <!-- ═══ MAIN — Merged/accent curves (purple, center third) ═══ -->
+          <g class="stream stream-merged">
+            <path class="flow flow-m1" style="--sway-x:12px;--sway-dur:8.5s" d="M260,930 C200,790 340,680 270,540 C200,400 350,310 290,170 C230,40 320,-50 300,-100" stroke="url(#fade-a-soft)" stroke-width="2.8" stroke-opacity="0.45" />
+            <path class="flow flow-m2" style="--sway-x:10px;--sway-dur:10s" d="M340,910 C400,770 280,670 350,530 C420,390 290,300 360,160 C430,30 310,-60 380,-100" stroke="url(#fade-a-purple)" stroke-width="2.2" stroke-opacity="0.35" />
+            <path class="flow flow-m3" style="--sway-x:15px;--sway-dur:7.5s" d="M300,720 C250,610 370,530 310,420 C250,310 380,230 320,120 C260,10 350,-60 330,-100" stroke="url(#fade-a-purple)" stroke-width="1.5" stroke-opacity="0.22" />
+          </g>
+
+          <!-- ═══ MAIN — AI curves (teal/lavender, right third) — dramatic S-curves ═══ -->
+          <g class="stream stream-ai">
+            <path class="flow flow-a1" style="--sway-x:13px;--sway-dur:7.5s" d="M380,940 C440,800 320,700 400,560 C480,420 330,330 410,190 C490,50 350,-40 420,-100" stroke="url(#fade-a-teal)" stroke-width="3.5" />
+            <path class="flow flow-a2" style="--sway-x:10px;--sway-dur:9.5s" d="M480,920 C420,780 550,670 490,540 C430,410 560,310 500,180 C440,50 540,-40 510,-100" stroke="url(#fade-a-teal)" stroke-width="2.5" stroke-opacity="0.55" />
+            <path class="flow flow-a3" style="--sway-x:14px;--sway-dur:8s" d="M430,710 C490,590 370,500 440,380 C510,260 380,180 450,60 C520,-60 400,-100 460,-100" stroke="url(#fade-a-soft)" stroke-width="2" stroke-opacity="0.35" />
+            <path class="flow flow-a4" style="--sway-x:8px;--sway-dur:12s" d="M550,930 C600,790 500,690 560,560 C620,430 510,340 570,210 C630,80 520,-10 580,-100" stroke="url(#fade-a-teal)" stroke-width="1.5" stroke-opacity="0.22" />
+          </g>
+        </svg>
+        <!-- Particle canvas overlay -->
+        <canvas class="hero-particle-canvas" id="heroParticles"></canvas>
       </div>
     </div>
   </section>
-
-  <!-- ========== INTERESTS TICKER ========== -->
-  <div class="interests-bar">
-    <div class="interests-track">
-      <span class="interest-item"><span class="interest-dot" style="background: var(--charcoal)"></span> Reading psychology literature</span>
-      <span class="interest-item"><span class="interest-dot" style="background: var(--accent-gold)"></span> Making cool music</span>
-      <span class="interest-item"><span class="interest-dot" style="background: var(--accent-teal)"></span> Walking in the forest</span>
-      <span class="interest-item"><span class="interest-dot" style="background: var(--accent-orange)"></span> Playing video games</span>
-      <span class="interest-item"><span class="interest-dot" style="background: var(--charcoal)"></span> Reading psychology literature</span>
-      <span class="interest-item"><span class="interest-dot" style="background: var(--accent-gold)"></span> Making cool music</span>
-      <span class="interest-item"><span class="interest-dot" style="background: var(--accent-teal)"></span> Walking in the forest</span>
-      <span class="interest-item"><span class="interest-dot" style="background: var(--accent-orange)"></span> Playing video games</span>
-      <span class="interest-item"><span class="interest-dot" style="background: var(--charcoal)"></span> Reading psychology literature</span>
-      <span class="interest-item"><span class="interest-dot" style="background: var(--accent-gold)"></span> Making cool music</span>
-      <span class="interest-item"><span class="interest-dot" style="background: var(--accent-teal)"></span> Walking in the forest</span>
-      <span class="interest-item"><span class="interest-dot" style="background: var(--accent-orange)"></span> Playing video games</span>
-    </div>
-  </div>
 
   <!-- ========== ABOUT SECTION ========== -->
   <section class="about-section section-padding">
@@ -116,8 +191,9 @@
         <img src="images/profile-photo.jpg" alt="Dr. Emrecan Gulay" class="about-photo">
       </div>
       <div class="about-text reveal">
-        <h2>Emrecan</h2>
-        <p>As an experienced HCI expert with a blend of curiosity, technological expertise, and a profound understanding of human behavior, I strive to create enjoyable and meaningful interactions. My particular passion lies in creating immersive and intuitive user experiences that can be enjoyed by everyone, transforming complex data into actionable insights, and enhancing the quality of life through innovative digital experiences.</p>
+        <h2>About</h2>
+        <p>We are researchers at Aalto University School of Business, investigating how people form and navigate relationships with AI systems. Our research centers on <em>relational dissonance</em> — the divergence between an individual's ontological and relational framing of AI systems and the relational dynamics that emerge as their interaction with these systems unfolds. This work bridges human-computer interaction, organizational behavior, and responsible AI design.</p>
+        <p>Before this, I completed my PhD at Aalto University's School of Arts, Design and Architecture, exploring feedback cycles between physical and digital design processes. I also spent time at Huawei's Institute of Strategic Research, contributing to human-machine interaction strategy and co-inventing five international patents. My background spans architecture, interaction design, and creative technology — a trajectory shaped by a persistent interest in what emerges at the boundaries of technological interfaces.</p>
       </div>
       <div class="reveal-right">
         <img src="images/character-drawing-1.png" alt="Hand-drawn character illustration" class="about-character">
@@ -125,19 +201,13 @@
     </div>
   </section>
 
-  <!-- ========== QUICK FACTS ========== -->
-  <section class="quick-facts">
+  <!-- ========== CURRENT RESEARCH ========== -->
+  <section class="current-research section-padding">
     <div class="container">
-      <div class="facts-grid reveal">
-        <div class="fact-item">
-          <span class="fact-highlight">Turned 32</span> this year (yay!) <span class="fact-emoji">🎉</span>
-        </div>
-        <div class="fact-item">
-          <span class="fact-highlight">Living in</span> Helsinki. <span class="fact-emoji">🇫🇮</span>
-        </div>
-        <div class="fact-item">
-          <span class="fact-highlight">Completed</span> my PhD! <span class="fact-emoji">🎓</span>
-        </div>
+      <div class="about-text reveal">
+        <h2>Current Research</h2>
+        <p>My current work examines the relational dynamics of human-AI interaction. Through qualitative research with knowledge workers, I identified five distinct relational configurations — Director, Trainer, Partner, Student, and Consumer — that people adopt when working with AI tools. This research was accepted at <strong>CHI 2026</strong>, the premier conference in human-computer interaction. I am also developing the <em>Relational Transparency Layer</em> (RTL), a prototype system that surfaces relational patterns in real time to help users reflect on their evolving relationship with AI.</p>
+        <p>This research is supported by the <strong>Jenny and Antti Wihuri Foundation</strong> and the <strong>Foundation for Economic Education (LSR)</strong>.</p>
       </div>
     </div>
   </section>
@@ -146,13 +216,21 @@
   <section class="actions-section">
     <div class="container">
       <div class="actions-grid reveal">
-        <a href="docs/Emrecan-Gulay-CV.pdf" target="_blank" class="action-card">
+        <a href="cv.html" class="action-card">
           <div class="action-icon">📄</div>
           <span class="action-label">CV</span>
         </a>
         <a href="publications.html" class="action-card">
           <div class="action-icon">⚛️</div>
           <span class="action-label">Publications</span>
+        </a>
+        <a href="https://scholar.google.com/citations?user=F1DVHl8AAAAJ&hl=en" target="_blank" rel="noopener" class="action-card">
+          <div class="action-icon">🎓</div>
+          <span class="action-label">Google Scholar</span>
+        </a>
+        <a href="mailto:emrecangulay@gmail.com" class="action-card">
+          <div class="action-icon">✉️</div>
+          <span class="action-label">Email</span>
         </a>
       </div>
     </div>
@@ -170,8 +248,8 @@
           <a href="https://www.linkedin.com/in/emrecan-gulay/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           </a>
-          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <a href="mailto:emrecangulay@gmail.com" class="social-link" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
           </a>
         </div>
       </div>
@@ -181,7 +259,11 @@
     </div>
   </footer>
 
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
   <script src="js/main.js"></script>
+  <script src="js/hero-particles.js"></script>
   <script src="js/cursor-effects.js"></script>
 </body>
 </html>
